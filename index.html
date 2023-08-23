@@ -1,0 +1,576 @@
+﻿<html>
+
+<head>
+<title>Katot Işın Tüpü Deneyi</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<script>
+
+function intro()
+
+{
+
+imgintro="url(image0.png)"
+
+infintro="- 20. yüzyılın başında, bir elektrik devresini oluşturan iletken tellerde elektrik akımının ne şekilde taşındığı bilinmemekteydi.<br>- J. J. Thomson elektrik akımının doğasını daha iyi anlayabilmek için onu tellerin dışına çıkarmayı denedi.<br>- Katot ışın tüpü, elektrik akımının taşıyıcısının doğasını, onu tellerden ayırarak incelemek için üretilen bir deney aracıdır.<br>- Bu araç daha sonra tüplü televizyonlarda da kullanılmıştır."
+
+document.getElementById("images").style.background=imgintro
+
+document.getElementById("inf").innerHTML=infintro
+
+document.getElementById("num").innerHTML=0
+
+document.getElementById("num1").innerHTML=0
+
+document.getElementById("num10").innerHTML=0
+
+document.getElementById("num100").innerHTML=0
+
+document.getElementById("num1000").innerHTML=0
+
+}
+
+
+
+function sett()
+
+{
+
+imgset="url(imagesetup.png)"
+
+infset="Katot ışın tüpü deneyi aşağıdaki malzemelerden oluşmaktadır: <br>- Katot ışın tüpü (Bir katot, bir delikli anot ve fosfor kaplı bir yüzeyden oluşan havası boşaltılmış bir cam tüptür.) <br>- Yüksek gerilim güç kaynağı (Katot ışın tüpünün katot ve anoduna bağlıdır.) <br>- Elektrik Alan Plakaları (Elektrik alan üretir.) <br>- Ayarlanabilir güç kaynağı (Plakalara bağlıdır.)"
+
+document.getElementById("images").style.background=imgset
+
+document.getElementById("inf").innerHTML=infset
+
+document.getElementById("num").innerHTML=0
+
+document.getElementById("num1").innerHTML=0
+
+document.getElementById("num10").innerHTML=0
+
+document.getElementById("num100").innerHTML=0
+
+document.getElementById("num1000").innerHTML=0
+
+}
+
+
+
+function fnum1inc()
+
+{
+
+cnt1=document.getElementById("num1").innerHTML
+
+varnum1=parseFloat(cnt1)+1
+
+if (varnum1>7){
+varnum1=7
+}
+
+varnum10=document.getElementById("num10").innerHTML
+
+varnum100=document.getElementById("num100").innerHTML
+
+varnum1000=document.getElementById("num1000").innerHTML
+
+varnum=parseFloat(varnum1)+parseFloat(varnum10)+parseFloat(varnum100)+parseFloat(varnum1000)
+
+varimg="url(image"+varnum+".png)"
+
+infnum1inc="Güç kaynağı daha yüksek bir güç değerine ayarlandı."
+
+document.getElementById("num1").innerHTML=varnum1
+
+document.getElementById("num").innerHTML=varnum
+
+document.getElementById("images").style.background=varimg
+
+document.getElementById("inf").innerHTML=infnum1inc
+
+}
+
+function fnum1dec()
+
+{
+
+cnt1=document.getElementById("num1").innerHTML
+
+varnum1=parseFloat(cnt1)-1
+
+if (varnum1<0){
+varnum1=0
+}
+
+varnum10=document.getElementById("num10").innerHTML
+
+varnum100=document.getElementById("num100").innerHTML
+
+varnum1000=document.getElementById("num1000").innerHTML
+
+varnum=parseFloat(varnum1)+parseFloat(varnum10)+parseFloat(varnum100)+parseFloat(varnum1000)
+
+varimg="url(image"+varnum+".png)"
+
+infnum1dec="Güç kaynağı daha düşük bir güç değerine ayarlandı."
+
+document.getElementById("num1").innerHTML=varnum1
+
+document.getElementById("num").innerHTML=varnum
+
+document.getElementById("images").style.background=varimg
+
+document.getElementById("inf").innerHTML=infnum1dec
+
+}
+
+function fnum10inc()
+
+{
+
+cnt10=document.getElementById("num10").innerHTML
+
+varnum10=parseFloat(cnt10)+10
+
+if (varnum10>10){
+varnum10=10
+}
+
+varnum1=document.getElementById("num1").innerHTML
+
+varnum100=document.getElementById("num100").innerHTML
+
+varnum1000=document.getElementById("num1000").innerHTML
+
+varnum=parseFloat(varnum1)+parseFloat(varnum10)+parseFloat(varnum100)+parseFloat(varnum1000)
+
+varimg="url(image"+varnum+".png)"
+
+infnum10inc="Yüksek gerilim güç kaynağı açıldı."
+
+document.getElementById("num10").innerHTML=varnum10
+
+document.getElementById("num").innerHTML=varnum
+
+document.getElementById("images").style.background=varimg
+
+document.getElementById("inf").innerHTML=infnum10inc
+
+}
+
+
+function fnum10dec()
+
+{
+
+cnt10=document.getElementById("num10").innerHTML
+
+varnum10=parseFloat(cnt10)-10
+
+if (varnum10<0){
+varnum10=0
+}
+
+varnum1=document.getElementById("num1").innerHTML
+
+varnum100=document.getElementById("num100").innerHTML
+
+varnum1000=document.getElementById("num1000").innerHTML
+
+varnum=parseFloat(varnum1)+parseFloat(varnum10)+parseFloat(varnum100)+parseFloat(varnum1000)
+
+varimg="url(image"+varnum+".png)"
+
+infnum10dec="Yüksek gerilim güç kaynağı kapatıldı."
+
+document.getElementById("num10").innerHTML=varnum10
+
+document.getElementById("num").innerHTML=varnum
+
+document.getElementById("images").style.background=varimg
+
+document.getElementById("inf").innerHTML=infnum10dec
+
+}
+
+function fnum100inc()
+
+{
+
+cnt100=document.getElementById("num100").innerHTML
+
+varnum100=parseFloat(cnt100)+100
+
+if (varnum100>100){
+varnum100=100
+}
+
+varnum1=document.getElementById("num1").innerHTML
+
+varnum10=document.getElementById("num10").innerHTML
+
+varnum1000=document.getElementById("num1000").innerHTML
+
+varnum=parseFloat(varnum1)+parseFloat(varnum10)+parseFloat(varnum100)+parseFloat(varnum1000)
+
+varimg="url(image"+varnum+".png)"
+
+infnum100inc="Ayarlanabilir güç kaynağı ters bağlanarak elektrik alan ters çevrildi."
+
+document.getElementById("num100").innerHTML=varnum100
+
+document.getElementById("num").innerHTML=varnum
+
+document.getElementById("images").style.background=varimg
+
+document.getElementById("inf").innerHTML=infnum100inc
+
+}
+
+function fnum100dec()
+
+{
+
+cnt100=document.getElementById("num100").innerHTML
+
+varnum100=parseFloat(cnt100)-100
+
+if (varnum100<0){
+varnum100=0
+}
+
+varnum1=document.getElementById("num1").innerHTML
+
+varnum10=document.getElementById("num10").innerHTML
+
+varnum1000=document.getElementById("num1000").innerHTML
+
+varnum=parseFloat(varnum1)+parseFloat(varnum10)+parseFloat(varnum100)+parseFloat(varnum1000)
+
+varimg="url(image"+varnum+".png)"
+
+infnum100dec="Elektrik alan ilk haline getirildi."
+
+document.getElementById("num100").innerHTML=varnum100
+
+document.getElementById("num").innerHTML=varnum
+
+document.getElementById("images").style.background=varimg
+
+document.getElementById("inf").innerHTML=infnum100dec
+
+}
+
+function fnum1000inc()
+
+{
+
+cnt1000=document.getElementById("num1000").innerHTML
+
+varnum1000=parseFloat(cnt1000)+1000
+
+if (varnum1000>1000){
+varnum1000=1000
+}
+
+varnum1=document.getElementById("num1").innerHTML
+
+varnum10=document.getElementById("num10").innerHTML
+
+varnum100=document.getElementById("num100").innerHTML
+
+varnum=parseFloat(varnum1)+parseFloat(varnum10)+parseFloat(varnum100)+parseFloat(varnum1000)
+
+varimg="url(image"+varnum+".png)"
+
+infnum1000inc="Yüksek gerilim güç kaynağı katot ışın tüpüne ters bağlandı."
+
+document.getElementById("num1000").innerHTML=varnum1000
+
+document.getElementById("num").innerHTML=varnum
+
+document.getElementById("images").style.background=varimg
+
+document.getElementById("inf").innerHTML=infnum1000inc
+
+}
+
+
+function fnum1000dec()
+
+{
+
+cnt1000=document.getElementById("num1000").innerHTML
+
+varnum1000=parseFloat(cnt1000)-1000
+
+if (varnum1000<0){
+varnum1000=0
+}
+
+varnum1=document.getElementById("num1").innerHTML
+
+varnum10=document.getElementById("num10").innerHTML
+
+varnum100=document.getElementById("num100").innerHTML
+
+varnum=parseFloat(varnum1)+parseFloat(varnum10)+parseFloat(varnum100)+parseFloat(varnum1000)
+
+varimg="url(image"+varnum+".png)"
+
+infnum1000dec="Katot ışın tüpünün bağlantıları ilk haline getirildi."
+
+document.getElementById("num1000").innerHTML=varnum1000
+
+document.getElementById("num").innerHTML=varnum
+
+document.getElementById("images").style.background=varimg
+
+document.getElementById("inf").innerHTML=infnum1000dec
+
+}
+
+
+
+
+function disc()
+
+{
+
+discimg="url(image14.png)"
+
+discinf="- Düzenekte yüksek gerilim güç kaynağının görevi nedir?<br>- Düzenekte elektrik alan plakalarının görevi nedir?<br>- Katot tüpünün içindeki hava neden boşaltılmıştır?<br>- Ayarlanabilir güç kaynağı kapalıyken katot ışını fosfor kaplı yüzeyin neresine düşer?<br>- Elektrik alandaki sapma biçimine bakarak katot ışınının yükü nedir?<br>- Yüksek gerilim güç kaynağının kutupları tüpe ters bağlandığında ne gözlemlediniz? Neden?<br>- Maddenin içindeki negatif yükler elektrik akımının iletilmesi esnasında nasıl davranır?<br>- Maddenin içindeki pozitif yükler elektrik akımının iletilmesi esnasında nasıl davranır?<br>- Katot tüpünde elektrik alan plakaları yerine mıknatıs kullanılırsa katot ışını nasıl davranır?<br>- Katot tüpünün içine serbestçe dönebilen hafif bir pervane yerleştirilirse katot ışını bu pervaneyi döndürür mü? Neden?"
+
+document.getElementById("images").style.background=discimg
+
+document.getElementById("inf").innerHTML=discinf
+
+document.getElementById("num").innerHTML=0
+
+document.getElementById("num1").innerHTML=0
+
+document.getElementById("num10").innerHTML=0
+
+document.getElementById("num100").innerHTML=0
+
+document.getElementById("num1000").innerHTML=0
+
+}
+
+
+
+function expl()
+
+{
+
+explimg="url(imageexp.png)"
+
+explinf="Bu deneyin sonucunda iletken tellerde elektrik akımını ileten yük taşıyıcılarının negatif yüklü olduğu anlaşılmış ve elektron keşfedilmiştir.<br>J. J. Thomson katot ışınının elektrik alanda sapma miktarına dayalı hesaplamalar yaparak negatif yük taşıyıcılarının çok hafif tanecikler olduğunu ortaya çıkarmıştır.<br>Maddeler nötr olduğuna göre maddenin içinde negatif yüklü taneciklerden çok daha ağır bir pozitif yükün olması gerektiğini iddia etmiştir.<br>Buna dayalı olarak, kendi atom modeli olan üzümlü kek modelini geliştirmiştir.<br>Üzümlü kek modelinde kek pozitif yüklü hareketsiz bir ortamı, üzümler ise gerektiğinde atomu terk edebilen elektronları temsil etmektedir."
+
+document.getElementById("images").style.background=explimg
+
+document.getElementById("inf").innerHTML=explinf
+
+document.getElementById("num").innerHTML=11
+
+}
+
+
+
+
+</script>
+
+
+</head>
+
+<body>
+
+<font face="calibri">
+<font size="7"><b>Katot Işın Tüpü Deneyi</b></font><br>
+
+<table id="images" border="0" width="1048" height="438" background="image0.png">
+
+<tr>
+
+<td>
+<button id="bnum1inc" style="background-color:grey;width:60;height:40;position:absolute;top:220;left:820" onclick="fnum1inc()"><b><font color="white" size="3">Artır</font></b></button><br>
+<button id="bnum1dec" style="background-color:grey;width:60;height:40;position:absolute;top:265;left:820" onclick="fnum1dec()"><b><font color="white" size="3">Azalt</font></b></button><br>
+<button id="bnum10inc" style="background-color:grey;width:60;height:40;position:absolute;top:220;left:120" onclick="fnum10inc()"><b><font color="white" size="3">AÇ</font></b></button><br>
+<button id="bnum10dec" style="background-color:grey;width:60;height:40;position:absolute;top:265;left:120" onclick="fnum10dec()"><b><font color="white" size="2">KAPAT</font></b></button><br>
+<button id="bnum100inc" style="background-color:lightblue;width:140;height:40;position:absolute;top:350;left:795" onclick="fnum100inc()"><b>Elektrik Alanı Ters Çevir</b></button><br>
+<button id="bnum100dec" style="background-color:lightblue;width:140;height:40;position:absolute;top:395;left:795" onclick="fnum100dec()"><b>Elektrik Alanı Düzelt</b></button><br>
+<button id="bnum1000inc" style="background-color:pink;width:160;height:40;position:absolute;top:365;left:270" onclick="fnum1000inc()"><b>Katot Tüpünü Ters Bağla</b></button><br>
+<button id="bnum1000dec" style="background-color:pink;width:160;height:40;position:absolute;top:410;left:270" onclick="fnum1000dec()"><b>Katot Tüpünün Bağlantısını Düzelt</b></button><br>
+
+</td>
+
+</tr>
+
+</table>
+<table>
+<tr>
+<td>
+<button id="intr" style="background-color:lightgrey;width:140px;height:33px" onclick="intro()"><b>Deneyin Amacı</b></button>
+<button id="setting" style="background-color:lightgrey;width:140px;height:33px" onclick="sett()"><b>Deney Düzeneği</b></button>
+<button id="bdisc" style="background-color:lightgrey;width:140px;height:33px" onclick="disc()"><b>Tartışma Soruları</b></button>
+<button id="bdisc" style="background-color:lightgrey;width:140px;height:33px" onclick="expl()"><b>Deneyin Sonuçları</b></button><br>
+</td>
+</tr>
+<tr>
+
+<td><p id="inf">- 20. yüzyılın başında, bir elektrik devresini oluşturan iletken tellerde elektrik akımının ne şekilde taşındığı bilinmemekteydi.<br>- J. J. Thomson elektrik akımının doğasını daha iyi anlayabilmek için onu tellerin dışına çıkarmayı denedi.<br>- Katot ışın tüpü, elektrik akımının taşıyıcısının doğasını, onu tellerden ayırarak incelemek için üretilen bir deney aracıdır.<br>- Bu araç daha sonra tüplü televizyonlarda da kullanılmıştır.</p>
+</td>
+</tr>
+
+</table><br>
+
+<font color="white"><p id="num1">0</p></font>
+
+<font color="white"><p id="num10">0</p></font>
+
+<font color="white"><p id="num100">0</p></font>
+
+<font color="white"><p id="num1000">0</p></font>
+
+<font color="white"><p id="num">0</p></font>
+
+<img src="image0.png" width="2">
+
+<img src="image1.png" width="2">
+
+<img src="image2.png" width="2">
+
+<img src="image3.png" width="2">
+
+<img src="image4.png" width="2">
+
+<img src="image5.png" width="2">
+
+<img src="image6.png" width="2">
+
+<img src="image7.png" width="2">
+
+<img src="image10.png" width="2">
+
+<img src="image11.png" width="2">
+
+<img src="image12.png" width="2">
+
+<img src="image13.png" width="2">
+
+<img src="image14.png" width="2">
+
+<img src="image15.png" width="2">
+
+<img src="image16.png" width="2">
+
+<img src="image17.png" width="2">
+
+<img src="image100.png" width="2">
+
+<img src="image101.png" width="2">
+
+<img src="image102.png" width="2">
+
+<img src="image103.png" width="2">
+
+<img src="image104.png" width="2">
+
+<img src="image105.png" width="2">
+
+<img src="image106.png" width="2">
+
+<img src="image107.png" width="2">
+
+<img src="image110.png" width="2">
+
+<img src="image111.png" width="2">
+
+<img src="image112.png" width="2">
+
+<img src="image113.png" width="2">
+
+<img src="image114.png" width="2">
+
+<img src="image115.png" width="2">
+
+<img src="image116.png" width="2">
+
+<img src="image117.png" width="2">
+
+<img src="image1000.png" width="2">
+
+<img src="image1001.png" width="2">
+
+<img src="image1002.png" width="2">
+
+<img src="image1003.png" width="2">
+
+<img src="image1004.png" width="2">
+
+<img src="image1005.png" width="2">
+
+<img src="image1006.png" width="2">
+
+<img src="image1007.png" width="2">
+
+<img src="image1010.png" width="2">
+
+<img src="image1011.png" width="2">
+
+<img src="image1012.png" width="2">
+
+<img src="image1013.png" width="2">
+
+<img src="image1014.png" width="2">
+
+<img src="image1015.png" width="2">
+
+<img src="image1016.png" width="2">
+
+<img src="image1017.png" width="2">
+
+<img src="image1100.png" width="2">
+
+<img src="image1101.png" width="2">
+
+<img src="image1102.png" width="2">
+
+<img src="image1103.png" width="2">
+
+<img src="image1104.png" width="2">
+
+<img src="image1105.png" width="2">
+
+<img src="image1106.png" width="2">
+
+<img src="image1107.png" width="2">
+
+<img src="image1110.png" width="2">
+
+<img src="image1111.png" width="2">
+
+<img src="image1112.png" width="2">
+
+<img src="image1113.png" width="2">
+
+<img src="image1114.png" width="2">
+
+<img src="image1115.png" width="2">
+
+<img src="image1116.png" width="2">
+
+<img src="image1117.png" width="2">
+
+<img src="imagesetup.png" width="2">
+
+<img src="imageexp.png" width="2">
+
+</font>
+
+</body>
+
+</html>
