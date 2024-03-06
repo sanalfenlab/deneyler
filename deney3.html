@@ -1,0 +1,268 @@
+﻿<html>
+
+<head>
+<title>Mıktanıstan Etkilenen Cisimler Sanal Deneyi</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<script>
+
+function intro()
+{
+imgintro="url(mknts0.png)"
+infintro="Bu deneyin amacı mıknatıstan etkilenen ve etkilenmeyen cisimleri gözlemlemektir. Başka bir ifadeyle, bu deneyde mıknatıslar çeşitli cisimlere yaklaştırılarak mıktanıs tarafından çekilip çekilmeyeceği gözlemlenmektedir."
+document.getElementById("images").style.background=imgintro
+document.getElementById("inf").innerHTML=infintro
+document.getElementById("num").innerHTML=0
+document.getElementById("num1").innerHTML=0
+document.getElementById("num10").innerHTML=0
+document.getElementById("num100").innerHTML=0
+document.getElementById("num1000").innerHTML=0
+}
+
+function sett()
+{
+imgset="url(mkntsd.png)"
+infset="Bu deneyde bir adet çivi, bir adet silgi, bir adet ataş, bir adet misket ve dört adet mıknatıs kullanılmaktadır. Bu deneyde mıknatıslar bu cisimlere yaklaştırılıp uzaklaştırılmaktadır."
+document.getElementById("images").style.background=imgset
+document.getElementById("inf").innerHTML=infset
+document.getElementById("num").innerHTML=0
+document.getElementById("num1").innerHTML=0
+document.getElementById("num10").innerHTML=0
+document.getElementById("num100").innerHTML=0
+document.getElementById("num1000").innerHTML=0
+}
+
+function fnum1inc()
+{
+cnt1=document.getElementById("num1").innerHTML
+varnum1=parseFloat(cnt1)+1
+if (varnum1>1){
+varnum1=1
+}
+varnum10=document.getElementById("num10").innerHTML
+varnum100=document.getElementById("num100").innerHTML
+varnum1000=document.getElementById("num1000").innerHTML
+varnum=parseFloat(varnum1)+parseFloat(varnum10)+parseFloat(varnum100)+parseFloat(varnum1000)
+varimg="url(mknts"+varnum+".png)"
+infnum1inc="Mıknatıs miskete yaklaştırıldı."
+document.getElementById("num1").innerHTML=varnum1
+document.getElementById("num").innerHTML=varnum
+document.getElementById("images").style.background=varimg
+document.getElementById("inf").innerHTML=infnum1inc
+}
+
+function fnum1dec()
+{
+cnt1=document.getElementById("num1").innerHTML
+varnum1=parseFloat(cnt1)-1
+if (varnum1<0){
+varnum1=0
+}
+varnum10=document.getElementById("num10").innerHTML
+varnum100=document.getElementById("num100").innerHTML
+varnum1000=document.getElementById("num1000").innerHTML
+varnum=parseFloat(varnum1)+parseFloat(varnum10)+parseFloat(varnum100)+parseFloat(varnum1000)
+varimg="url(mknts"+varnum+".png)"
+infnum1dec="Mıknatıs misketten uzaklaştırıldı."
+document.getElementById("num1").innerHTML=varnum1
+document.getElementById("num").innerHTML=varnum
+document.getElementById("images").style.background=varimg
+document.getElementById("inf").innerHTML=infnum1dec
+}
+
+function fnum10inc()
+{
+cnt10=document.getElementById("num10").innerHTML
+varnum10=parseFloat(cnt10)+10
+if (varnum10>10){
+varnum10=10
+}
+varnum1=document.getElementById("num1").innerHTML
+varnum100=document.getElementById("num100").innerHTML
+varnum1000=document.getElementById("num1000").innerHTML
+varnum=parseFloat(varnum1)+parseFloat(varnum10)+parseFloat(varnum100)+parseFloat(varnum1000)
+varimg="url(mknts"+varnum+".png)"
+infnum10inc="Mıknatıs ataşa yaklaştırıldı."
+document.getElementById("num10").innerHTML=varnum10
+document.getElementById("num").innerHTML=varnum
+document.getElementById("images").style.background=varimg
+document.getElementById("inf").innerHTML=infnum10inc
+}
+
+function fnum10dec()
+{
+cnt10=document.getElementById("num10").innerHTML
+varnum10=parseFloat(cnt10)-10
+if (varnum10<0){
+varnum10=0
+}
+varnum1=document.getElementById("num1").innerHTML
+varnum100=document.getElementById("num100").innerHTML
+varnum1000=document.getElementById("num1000").innerHTML
+varnum=parseFloat(varnum1)+parseFloat(varnum10)+parseFloat(varnum100)+parseFloat(varnum1000)
+varimg="url(mknts"+varnum+".png)"
+infnum10dec="Mıknatıs ataştan ayrılıp uzaklaştırıldı."
+document.getElementById("num10").innerHTML=varnum10
+document.getElementById("num").innerHTML=varnum
+document.getElementById("images").style.background=varimg
+document.getElementById("inf").innerHTML=infnum10dec
+}
+
+function fnum100inc()
+{
+cnt100=document.getElementById("num100").innerHTML
+varnum100=parseFloat(cnt100)+100
+if (varnum100>100){
+varnum100=100
+}
+varnum1=document.getElementById("num1").innerHTML
+varnum10=document.getElementById("num10").innerHTML
+varnum1000=document.getElementById("num1000").innerHTML
+varnum=parseFloat(varnum1)+parseFloat(varnum10)+parseFloat(varnum100)+parseFloat(varnum1000)
+varimg="url(mknts"+varnum+".png)"
+infnum100inc="Mıknatıs silgiye yaklaştırıldı."
+document.getElementById("num100").innerHTML=varnum100
+document.getElementById("num").innerHTML=varnum
+document.getElementById("images").style.background=varimg
+document.getElementById("inf").innerHTML=infnum100inc
+}
+
+function fnum100dec()
+{
+cnt100=document.getElementById("num100").innerHTML
+varnum100=parseFloat(cnt100)-100
+if (varnum100<0){
+varnum100=0
+}
+varnum1=document.getElementById("num1").innerHTML
+varnum10=document.getElementById("num10").innerHTML
+varnum1000=document.getElementById("num1000").innerHTML
+varnum=parseFloat(varnum1)+parseFloat(varnum10)+parseFloat(varnum100)+parseFloat(varnum1000)
+varimg="url(mknts"+varnum+".png)"
+infnum100dec="Mıknatıs silgiden uzaklaştırıldı."
+document.getElementById("num100").innerHTML=varnum100
+document.getElementById("num").innerHTML=varnum
+document.getElementById("images").style.background=varimg
+document.getElementById("inf").innerHTML=infnum100dec
+}
+
+function fnum1000inc()
+{
+cnt1000=document.getElementById("num1000").innerHTML
+varnum1000=parseFloat(cnt1000)+1000
+if (varnum1000>1000){
+varnum1000=1000
+}
+varnum1=document.getElementById("num1").innerHTML
+varnum10=document.getElementById("num10").innerHTML
+varnum100=document.getElementById("num100").innerHTML
+varnum=parseFloat(varnum1)+parseFloat(varnum10)+parseFloat(varnum100)+parseFloat(varnum1000)
+varimg="url(mknts"+varnum+".png)"
+infnum1000inc="Mıknatıs çiviye yaklaştırıldı."
+document.getElementById("num1000").innerHTML=varnum1000
+document.getElementById("num").innerHTML=varnum
+document.getElementById("images").style.background=varimg
+document.getElementById("inf").innerHTML=infnum1000inc
+}
+
+function fnum1000dec()
+{
+cnt1000=document.getElementById("num1000").innerHTML
+varnum1000=parseFloat(cnt1000)-1000
+if (varnum1000<0){
+varnum1000=0
+}
+varnum1=document.getElementById("num1").innerHTML
+varnum10=document.getElementById("num10").innerHTML
+varnum100=document.getElementById("num100").innerHTML
+varnum=parseFloat(varnum1)+parseFloat(varnum10)+parseFloat(varnum100)+parseFloat(varnum1000)
+varimg="url(mknts"+varnum+".png)"
+infnum1000dec="Mıknatıs çividen ayrılıp uzaklaştırıldı."
+document.getElementById("num1000").innerHTML=varnum1000
+document.getElementById("num").innerHTML=varnum
+document.getElementById("images").style.background=varimg
+document.getElementById("inf").innerHTML=infnum1000dec
+}
+
+function disc()
+{
+discimg="url(mknts0.png)"
+discinf="1. Mıknatıs bu nesnelerden hangilerini çekti hangilerini çekmedi?<br>2. Mıknatısın çektiği cisimlerin ortak özelliği nedir?<br>3. Mıknatısın çekmediği cisimlerin ortak özelliği nedir?<br>4. Mıknatıs ile cisimler arasındaki çekim kuvvetinin kaynağı ne olabilir?"
+document.getElementById("images").style.background=discimg
+document.getElementById("inf").innerHTML=discinf
+document.getElementById("num").innerHTML=0
+document.getElementById("num1").innerHTML=0
+document.getElementById("num10").innerHTML=0
+document.getElementById("num100").innerHTML=0
+document.getElementById("num1000").innerHTML=0
+}
+
+function expl()
+{
+explimg="url(mknts0.png)"
+explinf="Bu deneyde mıknatısların çiviyi ve ataşı çektiği, silgiyi ve misketi çekmediği görülmüştür. Çünkü mıktanıslar demir gibi bazı metalleri çekebilir fakat cam ve plastik gibi metal olmayan nesneleri çekemez."
+document.getElementById("images").style.background=explimg
+document.getElementById("inf").innerHTML=explinf
+document.getElementById("num").innerHTML=11
+}
+
+</script>
+</head>
+<body>
+<font face="calibri">
+<font size="7"><b>Mıktanıstan Etkilenen Cisimler Sanal Deneyi</b></font><br>
+<table id="images" border="0" width="920" height="510" background="mknts0.png">
+<tr>
+<td>
+<button id="bnum1inc" style="background-color:pink;width:100;height:30;position:absolute;top:100;left:800" onclick="fnum1inc()"><b><font color="black" size="2">Yaklaştır</font></b></button><br>
+<button id="bnum1dec" style="background-color:pink;width:100;height:30;position:absolute;top:70;left:800" onclick="fnum1dec()"><b><font color="black" size="2">Uzaklaştır</font></b></button><br>
+<button id="bnum10inc" style="background-color:pink;width:100;height:30;position:absolute;top:100;left:560" onclick="fnum10inc()"><b><font color="black" size="2">Yaklaştır</font></b></button><br>
+<button id="bnum10dec" style="background-color:pink;width:100;height:30;position:absolute;top:70;left:560" onclick="fnum10dec()"><b><font color="black" size="2">Uzaklaştır</font></b></button><br>
+<button id="bnum100inc" style="background-color:pink;width:100;height:30;position:absolute;top:100;left:320" onclick="fnum100inc()"><b><font color="black" size="2">Yaklaştır</font></b></button><br>
+<button id="bnum100dec" style="background-color:pink;width:100;height:30;position:absolute;top:70;left:320" onclick="fnum100dec()"><b><font color="black" size="2">Uzaklaştır</font></b></button><br>
+<button id="bnum1000inc" style="background-color:pink;width:100;height:30;position:absolute;top:100;left:70" onclick="fnum1000inc()"><b><font color="black" size="2">Yaklaştır</font></b></button><br>
+<button id="bnum1000dec" style="background-color:pink;width:100;height:30;position:absolute;top:70;left:70" onclick="fnum1000dec()"><b><font color="black" size="2">Uzaklaştır</font></b></button><br>
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td>
+<button id="intr" style="background-color:lightgrey;width:140px;height:33px" onclick="intro()"><b>Deneyin Amacı</b></button>
+<button id="setting" style="background-color:lightgrey;width:140px;height:33px" onclick="sett()"><b>Deney Düzeneği</b></button>
+<button id="bdisc" style="background-color:lightgrey;width:140px;height:33px" onclick="disc()"><b>Tartışma Soruları</b></button>
+<button id="bdisc" style="background-color:lightgrey;width:140px;height:33px" onclick="expl()"><b>Deneyin Sonuçları</b></button><br>
+</td>
+</tr>
+<tr>
+<td><p id="inf">Bu deneyin amacı mıknatıstan etkilenen ve etkilenmeyen cisimleri gözlemlemektir. Başka bir ifadeyle, bu deneyde mıknatıslar çeşitli cisimlere yaklaştırılarak mıktanıs tarafından çekilip çekilmeyeceği gözlemlenmektedir.</p>
+</td>
+</tr>
+</table><br>
+<font color="white"><p id="num1">0</p></font>
+<font color="white"><p id="num10">0</p></font>
+<font color="white"><p id="num100">0</p></font>
+<font color="white"><p id="num1000">0</p></font>
+<font color="white"><p id="num">0</p></font>
+<img src="mknts0.png" width="2">
+<img src="mknts1.png" width="2">
+<img src="mknts10.png" width="2">
+<img src="mknts11.png" width="2">
+<img src="mknts100.png" width="2">
+<img src="mknts101.png" width="2">
+<img src="mknts110.png" width="2">
+<img src="mknts111.png" width="2">
+<img src="mknts1000.png" width="2">
+<img src="mknts1001.png" width="2">
+<img src="mknts1010.png" width="2">
+<img src="mknts1011.png" width="2">
+<img src="mknts1100.png" width="2">
+<img src="mknts1101.png" width="2">
+<img src="mknts1110.png" width="2">
+<img src="mknts1111.png" width="2">
+<img src="mkntsd.png" width="2">
+</font>
+</body>
+</html>
