@@ -1,0 +1,271 @@
+﻿<html>
+
+<head>
+<title>Basit Elektrik Devresi Sanal Deneyi</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<script>
+
+function intro()
+{
+imgintro="url(devre0.png)"
+infintro="Bu deneyin amacı bir elektrik devresinin çalışabilmesi için hangi devre elemanlarının bulunması gerektiğini göstermektir. Yukarıdaki butonları kullanarak devreyi kurunuz."
+document.getElementById("images").style.background=imgintro
+document.getElementById("inf").innerHTML=infintro
+document.getElementById("num").innerHTML=0
+document.getElementById("num1").innerHTML=0
+document.getElementById("num10").innerHTML=0
+document.getElementById("num100").innerHTML=0
+document.getElementById("num1000").innerHTML=0
+}
+
+function sett()
+{
+imgset="url(devred.png)"
+infset="Bu deneyde bir adet pil, bir adet anahtar, bir adet ampul ve bağlantı kabloları kullanılmıştır."
+document.getElementById("images").style.background=imgset
+document.getElementById("inf").innerHTML=infset
+document.getElementById("num").innerHTML=0
+document.getElementById("num1").innerHTML=0
+document.getElementById("num10").innerHTML=0
+document.getElementById("num100").innerHTML=0
+document.getElementById("num1000").innerHTML=0
+}
+
+function fnum1inc()
+{
+cnt1=document.getElementById("num1").innerHTML
+varnum1=parseFloat(cnt1)+1
+if (varnum1>1){
+varnum1=1
+}
+varnum10=document.getElementById("num10").innerHTML
+varnum100=document.getElementById("num100").innerHTML
+varnum1000=document.getElementById("num1000").innerHTML
+varnum=parseFloat(varnum1)+parseFloat(varnum10)+parseFloat(varnum100)+parseFloat(varnum1000)
+varimg="url(devre"+varnum+".png)"
+infnum1inc="Anahtar kapatılmıştır."
+document.getElementById("num1").innerHTML=varnum1
+document.getElementById("num").innerHTML=varnum
+document.getElementById("images").style.background=varimg
+document.getElementById("inf").innerHTML=infnum1inc
+}
+
+function fnum1dec()
+{
+cnt1=document.getElementById("num1").innerHTML
+varnum1=parseFloat(cnt1)-1
+if (varnum1<0){
+varnum1=0
+}
+varnum10=document.getElementById("num10").innerHTML
+varnum100=document.getElementById("num100").innerHTML
+varnum1000=document.getElementById("num1000").innerHTML
+varnum=parseFloat(varnum1)+parseFloat(varnum10)+parseFloat(varnum100)+parseFloat(varnum1000)
+varimg="url(devre"+varnum+".png)"
+infnum1dec="Anahtar açılmıştır."
+document.getElementById("num1").innerHTML=varnum1
+document.getElementById("num").innerHTML=varnum
+document.getElementById("images").style.background=varimg
+document.getElementById("inf").innerHTML=infnum1dec
+}
+
+function fnum10inc()
+{
+cnt10=document.getElementById("num10").innerHTML
+varnum10=parseFloat(cnt10)+10
+if (varnum10>10){
+varnum10=10
+}
+varnum1=document.getElementById("num1").innerHTML
+varnum100=document.getElementById("num100").innerHTML
+varnum1000=document.getElementById("num1000").innerHTML
+varnum=parseFloat(varnum1)+parseFloat(varnum10)+parseFloat(varnum100)+parseFloat(varnum1000)
+varimg="url(devre"+varnum+".png)"
+infnum10inc="Ampul devreye yerleştirilmiştir."
+document.getElementById("num10").innerHTML=varnum10
+document.getElementById("num").innerHTML=varnum
+document.getElementById("images").style.background=varimg
+document.getElementById("inf").innerHTML=infnum10inc
+}
+
+function fnum10dec()
+{
+cnt10=document.getElementById("num10").innerHTML
+varnum10=parseFloat(cnt10)-10
+if (varnum10<0){
+varnum10=0
+}
+varnum1=document.getElementById("num1").innerHTML
+varnum100=document.getElementById("num100").innerHTML
+varnum1000=document.getElementById("num1000").innerHTML
+varnum=parseFloat(varnum1)+parseFloat(varnum10)+parseFloat(varnum100)+parseFloat(varnum1000)
+varimg="url(devre"+varnum+".png)"
+infnum10dec="Ampul devreden çıkarılmıştır."
+document.getElementById("num10").innerHTML=varnum10
+document.getElementById("num").innerHTML=varnum
+document.getElementById("images").style.background=varimg
+document.getElementById("inf").innerHTML=infnum10dec
+}
+
+function fnum100inc()
+{
+cnt100=document.getElementById("num100").innerHTML
+varnum100=parseFloat(cnt100)+100
+if (varnum100>100){
+varnum100=100
+}
+varnum1=document.getElementById("num1").innerHTML
+varnum10=document.getElementById("num10").innerHTML
+varnum1000=document.getElementById("num1000").innerHTML
+varnum=parseFloat(varnum1)+parseFloat(varnum10)+parseFloat(varnum100)+parseFloat(varnum1000)
+varimg="url(devre"+varnum+".png)"
+infnum100inc="Pil devreye yerleştirilmiştir."
+document.getElementById("num100").innerHTML=varnum100
+document.getElementById("num").innerHTML=varnum
+document.getElementById("images").style.background=varimg
+document.getElementById("inf").innerHTML=infnum100inc
+}
+
+function fnum100dec()
+{
+cnt100=document.getElementById("num100").innerHTML
+varnum100=parseFloat(cnt100)-100
+if (varnum100<0){
+varnum100=0
+}
+varnum1=document.getElementById("num1").innerHTML
+varnum10=document.getElementById("num10").innerHTML
+varnum1000=document.getElementById("num1000").innerHTML
+varnum=parseFloat(varnum1)+parseFloat(varnum10)+parseFloat(varnum100)+parseFloat(varnum1000)
+varimg="url(devre"+varnum+".png)"
+infnum100dec="Pil devreden çıkarılmıştır."
+document.getElementById("num100").innerHTML=varnum100
+document.getElementById("num").innerHTML=varnum
+document.getElementById("images").style.background=varimg
+document.getElementById("inf").innerHTML=infnum100dec
+}
+
+function fnum1000inc()
+{
+cnt1000=document.getElementById("num1000").innerHTML
+varnum1000=parseFloat(cnt1000)+1000
+if (varnum1000>1000){
+varnum1000=1000
+}
+varnum1=document.getElementById("num1").innerHTML
+varnum10=document.getElementById("num10").innerHTML
+varnum100=document.getElementById("num100").innerHTML
+varnum=parseFloat(varnum1)+parseFloat(varnum10)+parseFloat(varnum100)+parseFloat(varnum1000)
+varimg="url(devre"+varnum+".png)"
+infnum1000inc="Bağlantı kabloları takılmıştır."
+document.getElementById("num1000").innerHTML=varnum1000
+document.getElementById("num").innerHTML=varnum
+document.getElementById("images").style.background=varimg
+document.getElementById("inf").innerHTML=infnum1000inc
+}
+
+function fnum1000dec()
+{
+cnt1000=document.getElementById("num1000").innerHTML
+varnum1000=parseFloat(cnt1000)-1000
+if (varnum1000<0){
+varnum1000=0
+}
+varnum1=document.getElementById("num1").innerHTML
+varnum10=document.getElementById("num10").innerHTML
+varnum100=document.getElementById("num100").innerHTML
+varnum=parseFloat(varnum1)+parseFloat(varnum10)+parseFloat(varnum100)+parseFloat(varnum1000)
+varimg="url(devre"+varnum+".png)"
+infnum1000dec="Bağlantı kabloları çıkarılmıştır."
+document.getElementById("num1000").innerHTML=varnum1000
+document.getElementById("num").innerHTML=varnum
+document.getElementById("images").style.background=varimg
+document.getElementById("inf").innerHTML=infnum1000dec
+}
+
+function disc()
+{
+discimg="url(devre1111.png)"
+discinf="1. Devrenin çalışması için anahtar hangi konumda olmalıdır?<br>2. Devre elemanlarından biri eksik olursa devre çalışır mı? Neden?<br>3. Devrede pilin görevi nedir?<br>4. Devrede anahtarın görevi nedir?<br>5. Devrede ampulün görevi nedir?<br>6. Devrede bağlantı kablolarının görevi nedir?"
+document.getElementById("images").style.background=discimg
+document.getElementById("inf").innerHTML=discinf
+document.getElementById("num").innerHTML=1111
+document.getElementById("num1").innerHTML=1
+document.getElementById("num10").innerHTML=10
+document.getElementById("num100").innerHTML=100
+document.getElementById("num1000").innerHTML=1000
+}
+
+function expl()
+{
+explimg="url(devre1111.png)"
+explinf="Bir elektrik devresi elektrik enerjisini kullanarak ısı, ışık veya hareket elde etmeye yarayan bir araçtır. Elektrik devresinin çalışması için öncelikle pil gerekir, pil devreye elektrik enerjisi sağlar. Buna ek olarak bir devrede, devreyi çalıştırıp durdurmak için bir anahtar da bulunabilir, fakat anahtar olmasa da devre çalışabilir. Ayrıca, devrenin amacına göre bir ampul, motor veya direnç de bulunabilir. Bu deneyde devrenin amacı ışık üretmek olduğu için devrede ampul bulunmaktadır. Son olarak, tüm bu devre elemanlarını birbirine bağlamak için bağlantı kabloları kullanılır. Bu deneydeki devrenin çalışabilmesi için devredeki tüm devre elemanları birbirine uygun bir şekilde bağlanmış olmalıdır."
+document.getElementById("images").style.background=explimg
+document.getElementById("inf").innerHTML=explinf
+document.getElementById("num").innerHTML=1111
+document.getElementById("num1").innerHTML=1
+document.getElementById("num10").innerHTML=10
+document.getElementById("num100").innerHTML=100
+document.getElementById("num1000").innerHTML=1000
+}
+
+</script>
+</head>
+<body>
+<font face="calibri">
+<font size="7"><b>Basit Elektrik Devresi Sanal Deneyi</b></font><br>
+<table id="images" border="0" width="745" height="480" background="devre0.png">
+<tr>
+<td>
+<button id="bnum1inc" style="background-color:pink;width:100;height:40;position:absolute;top:427;left:90" onclick="fnum1inc()"><b><font color="black" size="2">Anahtarı Kapat</font></b></button><br>
+<button id="bnum1dec" style="background-color:pink;width:100;height:40;position:absolute;top:470;left:90" onclick="fnum1dec()"><b><font color="black" size="2">Anahtarı Aç</font></b></button><br>
+<button id="bnum10inc" style="background-color:yellow;width:100;height:40;position:absolute;top:427;left:240" onclick="fnum10inc()"><b><font color="black" size="2">Ampulü Yerleştir</font></b></button><br>
+<button id="bnum10dec" style="background-color:yellow;width:100;height:40;position:absolute;top:470;left:240" onclick="fnum10dec()"><b><font color="black" size="2">Ampulü Çıkar</font></b></button><br>
+<button id="bnum100inc" style="background-color:brown;width:100;height:40;position:absolute;top:427;left:390" onclick="fnum100inc()"><b><font color="white" size="2">Pili Yerleştir</font></b></button><br>
+<button id="bnum100dec" style="background-color:brown;width:100;height:40;position:absolute;top:470;left:390" onclick="fnum100dec()"><b><font color="white" size="2">Pili Çıkar</font></b></button><br>
+<button id="bnum1000inc" style="background-color:grey;width:100;height:40;position:absolute;top:427;left:540" onclick="fnum1000inc()"><b><font color="white" size="2">Kabloları Bağla</font></b></button><br>
+<button id="bnum1000dec" style="background-color:grey;width:100;height:40;position:absolute;top:470;left:540" onclick="fnum1000dec()"><b><font color="white" size="2">Kabloları Çıkar</font></b></button><br>
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td>
+<button id="intr" style="background-color:lightgrey;width:140px;height:33px" onclick="intro()"><b>Deneyin Amacı</b></button>
+<button id="setting" style="background-color:lightgrey;width:140px;height:33px" onclick="sett()"><b>Deney Düzeneği</b></button>
+<button id="bdisc" style="background-color:lightgrey;width:140px;height:33px" onclick="disc()"><b>Tartışma Soruları</b></button>
+<button id="bdisc" style="background-color:lightgrey;width:140px;height:33px" onclick="expl()"><b>Deneyin Sonuçları</b></button><br>
+</td>
+</tr>
+<tr>
+<td><p id="inf">Bu deneyin amacı bir elektrik devresinin çalışabilmesi için hangi devre elemanlarının bulunması gerektiğini göstermektir. Yukarıdaki butonları kullanarak devreyi kurunuz.</p>
+</td>
+</tr>
+</table><br>
+<font color="white"><p id="num1">0</p></font>
+<font color="white"><p id="num10">0</p></font>
+<font color="white"><p id="num100">0</p></font>
+<font color="white"><p id="num1000">0</p></font>
+<font color="white"><p id="num">0</p></font>
+<img src="devre0.png" width="2">
+<img src="devre1.png" width="2">
+<img src="devre10.png" width="2">
+<img src="devre11.png" width="2">
+<img src="devre100.png" width="2">
+<img src="devre101.png" width="2">
+<img src="devre110.png" width="2">
+<img src="devre111.png" width="2">
+<img src="devre1000.png" width="2">
+<img src="devre1001.png" width="2">
+<img src="devre1010.png" width="2">
+<img src="devre1011.png" width="2">
+<img src="devre1100.png" width="2">
+<img src="devre1101.png" width="2">
+<img src="devre1110.png" width="2">
+<img src="devre1111.png" width="2">
+</font>
+</body>
+</html>
